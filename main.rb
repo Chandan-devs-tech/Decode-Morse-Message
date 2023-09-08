@@ -47,4 +47,7 @@ end
 def decode_word(morse_word)
   morse_word.split.map { |morse_chararacter| decode_character(morse_chararacter) }.join
 end
-#method for message
+# Method to decode a Morse code message
+def decode_messag(morse_messag)
+  morse_messag.split('   ').map { |morse_word| decode_word(morse_word) }.join(' ')
+end
