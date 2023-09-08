@@ -43,5 +43,8 @@ dictionary = {
 def decode_character(morse_character)
     dictionary[morse_character]
 end
-#method for word
+# Method to decode a Morse code word
+def decode_word(morse_word)
+  morse_word.split.map { |morse_chararacter| decode_character(morse_chararacter) }.join
+end
 #method for message
